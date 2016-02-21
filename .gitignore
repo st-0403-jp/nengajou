@@ -1,1 +1,2 @@
-node_module
+# node_modulesは無視する
+node_modules/
