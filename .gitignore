@@ -3,3 +3,6 @@ node_modules/
 
 # dataは無視
 data/
+
+# userは無視
+user/
