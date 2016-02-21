@@ -1,2 +1,5 @@
 # node_modulesは無視する
 node_modules/
+
+# dataは無視
+data/
