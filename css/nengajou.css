@@ -1,0 +1,334 @@
+/*nengajou.css*/
+@charset "utf-8";
+
+html {
+  height: 100%;
+}
+
+body {
+  background-color: #000;
+  height: 100%;
+  padding: 2em 1em 3em;
+  perspective: 250;
+  -webkit-perspective: 250;
+}
+
+img {
+  width: 100%;
+}
+
+/*年賀状部分*/
+.wrap-nengajou {
+  display: block;
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+  box-shadow: 2px 2px 20px 1px #B8860B;
+  cursor: pointer;
+  transform-origin: center center;
+  -webkit-transform-origin: center center;
+  transform: rotateY(0deg);
+  -webkit-transform: rotateY(0deg);
+  transition: transform 2s ease 0.2s;
+  -webkit-transition: -webkit-transform 2s ease 0.2s;
+}
+
+/*イメージギャラリー*/
+.gallery {
+  height: 50%;
+  overflow: hidden;
+  perspective: 250;
+  -webkit-perspective: 250;
+}
+.gallery img {
+  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+}
+
+/*表面*/
+.omote {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  opacity: 1.0;
+  transition: opacity 2s ease 0.1s;
+  -webkit-transition: opacity 2s ease 0.1s;
+}
+.omote .area {
+  height: 100%;
+}
+
+.omote .left {
+  position: relative;
+  width: 33%;
+}
+.omote .center {
+  position: relative;
+  width: 34%;
+  font-family: cursive;
+  overflow: hidden;
+}
+.omote .right {
+  position: relative;
+  width: 33%;
+}
+.name {
+  display: inline-block;
+  width: 1em;
+  /*float: right;*/
+  color: #555;
+  font-weight: bold;
+  font-size: 35px;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+.name .sama {
+  color: #000;
+}
+.my-name {
+  font-size: 20px;
+  position: absolute;
+}
+.aisatu {
+  display: inline-block;
+  width: 1em;
+  /*float: right;*/
+  color: #555;
+  font-weight: bold;
+  font-size: 25px;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+.tap {
+  color: #fff;
+  background-color: #f00;
+  padding: 5px;
+  border-radius: 20px;
+  font-weight: bold;
+  position: absolute;
+  top: 60%;
+  left: 10%;
+  animation: tap 1s ease 0s infinite forwards;
+  -webkit-animation: tap 1s ease 0s infinite forwards;
+}
+@keyframes tap {
+  0% { opacity: 1;}
+  100% { opacity: 0; }
+}
+@-webkit-keyframes tap {
+  0% { opacity: 1;}
+  100% { opacity: 0; }
+}
+
+/*裏面*/
+.ura {
+  width: 100%;
+  height: 100%;
+  opacity: 1.0;
+  transition: opacity 2s ease 0.1s;
+  -webkit-transition: opacity 2s ease 0.1s;
+}
+.greeting {
+  height: 50%;
+  position: relative;
+  font-size: 20px;
+  margin: 0 10%;
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+}
+.greeting p span {
+  display: inline-block;
+  color: #fff;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.greeting .right span:first-child {
+  position: absolute;
+  top: 10px;
+  left: 0;
+}
+.greeting .right span:nth-child(2) {
+  position: absolute;
+  top: 42px;
+  left: 0;
+}
+.greeting .right span:nth-child(3) {
+  position: absolute;
+  top: 74px;
+  left: 0;
+}
+.greeting .right span:nth-child(4) {
+  position: absolute;
+  top: 105px;
+  left: 0;
+}
+.greeting .right span:last-child {
+  position: absolute;
+  top: 135px;
+  left: 0;
+}
+
+.greeting .center span:first-child {
+  position: absolute;
+  top: 25px;
+  left: 36px;
+}
+.greeting .center span:nth-child(2) {
+  position: absolute;
+  top: 58px;
+  left: 36px;
+}
+.greeting .center span:nth-child(3) {
+  position: absolute;
+  top: 89px;
+  left: 36px;
+}
+.greeting .center span:nth-child(4) {
+  position: absolute;
+  top: 120px;
+  left: 36px;
+}
+.greeting .center span:last-child {
+  position: absolute;
+  top: 151px;
+  left: 36px;
+}
+
+.greeting .left span:first-child {
+  position: absolute;
+  top: 40px;
+  left: 72px;
+}
+.greeting .left span:nth-child(2) {
+  position: absolute;
+  top: 73px;
+  left: 72px;
+}
+.greeting .left span:nth-child(3) {
+  position: absolute;
+  top: 104px;
+  left: 72px;
+}
+.greeting .left span:nth-child(4) {
+  position: absolute;
+  top: 135px;
+  left: 72px;
+}
+.greeting .left span:last-child {
+  position: absolute;
+  top: 166px;
+  left: 72px;
+}
+
+/*fuji*/
+.fuji {
+  position: relative;
+  width: 50%;
+  height: 100px;
+  background-color: skyblue;
+  border-bottom: 2px solid #ccc;
+  overflow: hidden;
+  transform: translate3d(100%, 130%, 0px);
+  -webkit-transform: translate3d(100%, 130%, 0px);
+}
+.fuji:before {
+  content: " ";
+  display: inline-block;
+  width: 140px;
+  height: 150px;
+  border-radius: 75px;
+  border: 3px solid #ccc;
+  background-color: #fff;
+  position: absolute;
+  top: -75px;
+  left: 86px;
+}
+.fuji:after {
+  content: " ";
+  display: inline-block;
+  width: 140px;
+  height: 150px;
+  border-radius: 75px;
+  border: 3px solid #ccc;
+  background-color: #fff;
+  position: absolute;
+  top: -75px;
+  left: -75px;
+}
+
+.fuji-circle {
+  display: inline-block;
+  width: 140px;
+  height: 150px;
+  border-radius: 75px;
+  background-color: #fff;
+  position: absolute;
+}
+
+.fuji-line {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-top: 8px solid #fff;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-left: 8px solid transparent;
+  position: absolute;
+}
+
+.hinode {
+  display: inline-block;
+}
+.hinode.type-01 {
+  width: 50px;
+  height: 50px;
+  background-color: #f90;
+  border-radius: 25px;
+  transform: translate3d(150px, 70px, 20px);
+  -webkit-transform: translate3d(150px, 70px, 20px);
+  transition: transform 2s linear 0.2s;
+  -webkit-transition: -webkit-transform 2s linear 0.2s;
+}
+.hinode.type-02 {
+  width: 70px;
+  height: 70px;
+  background-color: transparent;
+  border: 6px #f00 dashed;
+  border-radius: 35px;
+  opacity: 0;
+  transform: translate3d(84.5px, -94px, 10px);
+  -webkit-transform: translate3d(84.5px, -94px, 10px);
+  transition: opacity 3s linear 2.5s;
+  -webkit-transition: opacity 3s linear 2.5s;
+}
+.hinode.type-03 {
+  width: 85px;
+  height: 85px;
+  background-color: transparent;
+  border: 5px #ff0 dashed;
+  border-radius: 42.5px;
+  opacity: 0;
+  transform: translate3d(0px, -86px, 10px);
+  -webkit-transform: translate3d(0px, -86px, 10px);
+  transition: opacity 3s linear 4s;
+  -webkit-transition: opacity 3s linear 4s;
+}
+.hinode.type-04 {
+  width: 95px;
+  height: 95px;
+  background-color: transparent;
+  border: 4px #f50 dashed;
+  border-radius: 47.5px;
+  opacity: 0;
+  transform: translate3d(128px, -183px, 10px);
+  -webkit-transform: translate3d(128px, -183px, 10px);
+  transition: opacity 3s linear 6s;
+  -webkit-transition: opacity 3s linear 6s;
+}
