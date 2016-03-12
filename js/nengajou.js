@@ -30,8 +30,8 @@ common.page = (function () {
         })
       ).done(function (omote, ura) {
 
-        var omote = omote;
-        var ura = ura;
+        var omote = omote || null;
+        var ura = ura || null;
 
         // まず表レンダリング
         var $nengajou = $('.wrap-nengajou');
